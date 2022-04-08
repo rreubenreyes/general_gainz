@@ -39,16 +39,16 @@ func (f *FS) Head() (*history.Event, error) {
 	}
 
 	r := bufio.NewReader(file)
-  raw, _, err := r.ReadLine()
+	raw, _, err := r.ReadLine()
 	if err != nil {
 		return nil, err
 	}
 
-  var data *history.Event
-  err = json.Unmarshal(raw, data)
+	var data *history.Event
+	err = json.Unmarshal(raw, data)
 	if err != nil {
 		return nil, err
 	}
 
-  return data, nil
+	return data, nil
 }

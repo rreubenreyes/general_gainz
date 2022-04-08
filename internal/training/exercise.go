@@ -32,4 +32,3 @@ type Flavor struct {
 	Decision  Decision
 	Extension int
 }
-
